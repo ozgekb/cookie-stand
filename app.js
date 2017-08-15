@@ -140,10 +140,10 @@ var alki = {
     }
   },
 };
+
 var locations = [firstAndPike, seaTacAirport,seattleCenter,capitolHill,alki];
 var body = document.getElementsByTagName('body')[0];
-
-for (var i = 0; i < 2; i++) {
+for (var i = 0; i < 4; i++) {
   var h = document.createElement('h1');
   h.appendChild(document.createTextNode(locations[i].locationOfStore));
   body.appendChild(h);
