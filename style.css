@@ -1,0 +1,68 @@
+@import 'https://fonts.googleapis.com/css?family=Oswald';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans|Sedgwick+Ave';
+.navHead{
+  text-align: center;
+  background-color: rgb(226, 162, 142);
+  font-family: 'Zilla Slab Highlight', cursive;
+}
+.salmon{
+  width : 50%;
+  margin-left:10%;
+  margin-right: 5%;
+  padding: 2%;
+  margin-top: 1%;
+
+}
+body{
+  background-image: url(/Users/boyraz/myGit/cookie-stand/bake.jpg);
+}
+.bottom{
+  position: relative;
+  width: 100%;
+  top: 100px;
+  height:200px;
+  padding-left: 3%
+}
+.home{
+  text-align: center;
+  background-color: rgb(226, 162, 142);
+  line-height: 70px;
+  font-family: 'Open Sans', sans-serif;
+}
+.locations{
+
+  margin-top: auto;
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  border: 2px solid black;
+  width:30%;
+  background-color:rgba(82, 82, 82, 0.48);
+  text-align: center;
+}
+.hours{
+  margin-top: auto;
+  display: inline-block;
+  vertical-align: bottom;
+  overflow: hidden;
+  border: 2px solid black;
+  width:30%;
+  height: 136%;
+  margin-left: 20%
+  background-color:rgba(82, 82, 82, 0.48);
+  text-align: center;
+  background-color:rgba(82, 82, 82, 0.48);
+}
+.contact{
+  margin-top: auto;
+  display: inline-block;
+  vertical-align: bottom;
+  overflow: hidden;
+  border: 2px solid black;
+  width:30%;
+  height: 136%;
+  margin-left: 30%
+  background-color:rgba(82, 82, 82, 0.48);
+  text-align: center;
+  background-color:rgba(82, 82, 82, 0.48);
+}
