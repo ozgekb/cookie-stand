@@ -33,11 +33,10 @@ var mySeattleCenter = new Store(11, 38, 3.7,'Seattle Center');
 var myCapitolHill = new Store(20, 38, 2.3,'Capitol Hill');
 var myAlki = new Store(2, 16, 4.7,'Alki');
 var storeList = [myFirstAndPike,mySeaTacAirport,mySeattleCenter,myCapitolHill,myAlki];
+
 for( var i in storeList){
   storeList[i].hoursAndCookies();
 }
-
-
 
 var body = document.getElementsByTagName('body')[0];
 var myTable = document.createElement('table');
@@ -45,17 +44,20 @@ body.appendChild(myTable);
 
 var firstRow = document.createElement('tr');
 firstRow.appendChild(document.createElement('th'));
+
 for(var i = 0; i < storeList[0].hours.length; i++){
   var hour = storeList[0].hours[i];
   var column = document.createElement('th');
-  column.appendChild(document.createTextNode(hour));
+  column.innerText = hour;
   firstRow.appendChild(column);
 }
+
 var column = document.createElement('th');
-column.appendChild(document.createTextNode('Daily Location Total'));
+column.innerText = 'Daily Location Total';
 firstRow.appendChild(column);
 myTable.appendChild(firstRow);
 var hourlyTotal = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+
 for(var i = 0; i < storeList.length; i++){
   var column = document.createElement('th');
   var newRow = document.createElement('tr');
@@ -74,6 +76,7 @@ for(var i = 0; i < storeList.length; i++){
   newRow.appendChild(column);
   myTable.appendChild(newRow);
 }
+
 var newRow = document.createElement('tr');
 var column = document.createElement('th');
 column.innerText = 'Hourly Total';
