@@ -1,15 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
 function Store(minCustomersPerHour,maxCustomersPerHour,avgCookiesPerCust,storeLocation){
   this.minCustomersPerHour = minCustomersPerHour;
   this.maxCustomersPerHour = maxCustomersPerHour;
@@ -113,4 +102,25 @@ myStoreList.addNewStore(2, 16, 4.7,'Alki');
 
 var body = document.getElementsByTagName('body')[0];
 var table = myStoreList.createTable();
+table.id = 'myTable';
 body.appendChild(table);
+function processForm(event){
+  event.preventDefault();
+  // "this" applies to the element where the event was triggered.
+  var minCustomersPerHour = parseInt(this.elements['minHourlyCustNumber'].value);
+  var maxCustomersPerHour = parseInt(this.elements['maxHourlyCustNumber'].value);
+  var avgCookiesPerCust = parseInt(this.elements['avgCookiesPerCust'].value);
+  var storeLocation = this.elements['locationOfStore'].value;
+  myStoreList.addNewStore(minCustomersPerHour,maxCustomersPerHour,avgCookiesPerCust,storeLocation);
+  var body = document.getElementsByTagName('body')[0];
+  var table = document.getElementById('myTable');
+  body.removeChild(table);
+  table = myStoreList.createTable();
+  body.appendChild(table);
+  // this.reset();
+}
+
+
+
+var form = document.getElementById('theForm');
+form.addEventListener('submit', processForm);
