@@ -119,8 +119,5 @@ function processForm(event){
   body.appendChild(table);
   // this.reset();
 }
-
-
-
 var form = document.getElementById('theForm');
 form.addEventListener('submit', processForm);
