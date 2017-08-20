@@ -3,8 +3,11 @@
 .navHead{
   text-align: center;
   font-family: 'Zilla Slab Highlight', cursive;
-  background-color: rgba(213, 186, 218, 0.79);;
+  background-color: rgba(247, 204, 159, 0.79);
 
+}
+.navHead h1{
+  top: 10px;
 }
 table{
   border:3px solid black;
@@ -23,35 +26,32 @@ td{
   width : 30%;
   position: relative;
   left: 1%;
-  top:1%;
+}
+.home p {
+  margin-top: 0;
 }
 #family{
-  width: 40%;
-  display: block;
-  text-align: center;
-  vertical-align: middle;
-
-
-}
-#buy{
-  display: inline-block;
-  position: relative;
-  left: 60%;
-  color: red;
-  font-weight: bolder;
-
-}
-#tshirt{
-display: inline-block;
+width: 45%;
 position: relative;
-left: 30%;
-width: 10%;
-bottom: 60%;
 text-align: center;
+display: inline-block;
+left: 27%;
+top:
+
+}
+
+.buyMe{
+display: inline;
+position: relative;
+bottom: 10px;
+text-align: left;
+right: 600px;
 
 }
 body{
-background-image: url(rain.jpg);
+background-image: url(autumn.jpg);
+width: 100%;
+background-repeat: no-repeat;
 background-size: cover;
 }
 .bottom{
@@ -66,33 +66,56 @@ background-size: cover;
   line-height: 70px;
   font-family: 'Open Sans', sans-serif;
   padding-top: :1%;
-  background-color: rgba(213, 186, 218, 0.79);
+  background-color: rgba(247, 204, 159, 0.79);
   font-weight: 900;
 }
+
 .locations{
-  display: inline-block;
+  display: inline;
   text-align: center;
   position: relative;
-  left: 18%;
+  left: 10px;
+  top: -250px;
 
 }
-#fish{
-  width: 28%;
+.fishLocations{
+  display: inline;
 }
-#frosted{
-  display: inline-block;
+
+.cutter{
+    display: inline;
+    width: 15%;
+    position: relative;
+    top: -523px;
+    left: 55%;
+}
+.frosted{
+  display: inline;
   position: relative;
+  width: 55%;
+  bottom: 315px;
   left:40%;
-  width: 35%;
 }
+
+.blueFish{
+    position: relative;
+    display: inline-block;
+    width: 25%;
+}
+
 .hours{
-bottom: 10%;
 text-align: left;
 background-color: rgba(213, 186, 218, 0.79);
 display: inline-block;
-width: 30%;
+width: 100%;
+margin:0px;
 }
-.contact{
+#sell{
   display: inline-block;
-  text-align: right;
+  position: relative;
+  bottom: 10px;
+  text-align: left;
+  right: 550px;
+  line-height: 1.9em;
+  color: blue;
 }
