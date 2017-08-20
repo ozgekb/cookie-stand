@@ -17,7 +17,14 @@ function Store(minCustomersPerHour,maxCustomersPerHour,avgCookiesPerCust,storeLo
     }
   };
 };
-
+var render = function(){
+  var body = document.getElementsByTagName('body')[0];
+  var form = document.getElementsByTagName('theForm');
+  var table = document.getElementById('myTable');
+  body.removeChild(table);
+  table = myStoreList.createTable();
+  body.appendChild(table);
+};
 var StoreList = function(){
   this.storeList = [];
   this.hours = [];
@@ -109,15 +116,11 @@ function processForm(event){
   // "this" applies to the element where the event was triggered.
   var minCustomersPerHour = parseInt(this.elements['minHourlyCustNumber'].value);
   var maxCustomersPerHour = parseInt(this.elements['maxHourlyCustNumber'].value);
-  var avgCookiesPerCust = parseInt(this.elements['avgCookiesPerCust'].value);
+  var avgCookiesPerCust = parseFloat(this.elements['avgCookiesPerCust'].value);
   var storeLocation = this.elements['locationOfStore'].value;
   myStoreList.addNewStore(minCustomersPerHour,maxCustomersPerHour,avgCookiesPerCust,storeLocation);
-  var body = document.getElementsByTagName('body')[0];
-  var table = document.getElementById('myTable');
-  body.removeChild(table);
-  table = myStoreList.createTable();
-  body.appendChild(table);
-  // this.reset();
+  render();
+  theForm.reset();
 }
 var form = document.getElementById('theForm');
 form.addEventListener('submit', processForm);
