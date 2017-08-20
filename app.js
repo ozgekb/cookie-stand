@@ -105,7 +105,7 @@ var table = myStoreList.createTable();
 table.id = 'myTable';
 body.appendChild(table);
 function processForm(event){
-  event.preventDefault();
+  event.preventDefault();//stop form from actually sending data elsewhere
   // "this" applies to the element where the event was triggered.
   var minCustomersPerHour = parseInt(this.elements['minHourlyCustNumber'].value);
   var maxCustomersPerHour = parseInt(this.elements['maxHourlyCustNumber'].value);
